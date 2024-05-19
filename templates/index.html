@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sistem Rekomendasi Jurusan FMIPA IPB</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header & Hero credit: https://bootstrapmade.com/reveal-bootstrap-corporate-template/ -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div id="logo">
+        <a href="index.html"><img src="static/img/logo-fmipa-ipb.png" alt=""></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Sistem Rekomendasi <br>Jurusan FMIPA IPB</h2>
+      <div>
+        <a href="#form" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+
+    <div class="hero-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/1.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/2.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/3.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/4.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/5.jpg');"></div>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Form Section ======= -->
+
+    <!-- Form credit: https://w3sniff.com/code?id=60&title=Multi-Step-Form-with-Progress-Bar-using-bootstrap-5 -->
+
+    <section id="form">
+      <div class="container section-header" data-aos="fade-up">
+
+        <h2 class="text-center fs-4">Multi Step Quiz</h2>
+
+        <form id="quiz-form" action="#!">  
+          <!--   -->
+            <!-- start step indicators -->
+            <div class="form-header d-flex mb-4">
+                <span class="stepIndicator">Holland RIASEC</span>
+                <span class="stepIndicator">Tes Kecenderungan Otak</span>
+                <span class="stepIndicator">Tipe Kecerdasan</span>
+                <span class="stepIndicator">Gaya Belajar</span>
+            </div>
+            <!-- end step indicators -->
+        
+            <!-- step one -->
+            <div class="step" id="test-1">
+
+              <div class="row test-header">
+                <h3>Holland RIASEC Test</h3>
+                <p class="desc">Tes ini bertujuan untuk menentukan tipe keminatan kamu terhadap sesuatu. 
+                  Silahkan diisi dengan jujur dan sesuai karena setiap pertanyaan mempengaruhi hasil dari keminatan kamu.</p>
+              </div>
+
+              <div id="riasec-container"></div>
+
+              <!--<button id="submit-riasec" onclick="submitRIASEC()">Submit</button> -->
+            </div>
+        
+            <!-- step two -->
+            <div class="step" id="test-2">
+
+              <div class="row test-header">
+                <h3>Tes Kecenderungan Otak</h3>
+                <p class="desc">Terdapat sebuah tes yang mudah dan sederhana untuk menentukan dominansi otak. 
+                  Tes tersebut memanfaatkan pergerakan tangan yang spontan, yaitu ketika menggenggam tangan (seperti di gambar) dan ketika melipat tangan di depan dada/perut. </p>
+              </div>
+
+              <div class="container g-2 tes-otak">
+                <div class="row gap-4 p-3">
+
+                  <div class="tes-a col">
+                    <p>Tes A</p>
+                    <img src="static/img/tes-a.jpg">
+                    <p>Jika ibu jari tangan kiri berada di bawah artinya kamu dominan otak kiri.<br>
+                      Jika ibu jari tangan kanan di bawah artinya kamu dominan otak kanan.</p>
+
+                  </div>
+        
+                  <div class="tes-b col">
+                    <p>Tes B</p>
+                    <img src="static/img/tes-b.jpg">
+                    <p>Jika tangan kanan tepat di atas artinya kamu dominan otak kiri.<br>
+                      Jika tangan kiri tepat di atas artinya kamu dominan otak kanan.</p>
+                    </div>
+
+                </div>
+
+                <div class="row gap-4 p-3">
+                  <div>
+                    <p>Bagaimana jika hasil tes A dan B digabung?</p>
+                    <p>(Tes A) Kanan + (Tes B) Kiri = Seimbang cenderung otak kanan<br>
+                      (Tes A) Kanan + (Tes B) Kanan = Dominan otak kanan<br>
+                      (Tes A) Kiri + (Tes B) Kiri = Dominan otak kiri<br>
+                      (Tes A) Kiri + (Tes B) Kanan = Seimbang cenderung otak kiri</p>
+                  </div>
+                </div>
+
+                <div class="row gap-4 p-3">
+                  <div>
+                    <p>Kamu dominan otak kanan atau kiri?</p>
+                    <div>
+                      <ul class="no-bullet">
+                        <li><input type="radio" name="dominance" value="dom_kanan">
+                          <label>Dominan otak kanan</label></li>
+                        <li><input type="radio" name="dominance" value="dom_kiri">
+                          <label>Dominan otak kiri</label></li>
+                        <li><input type="radio" name="dominance" value="seimbang_kanan">
+                          <label>Seimbang cenderung otak kanan</label></li>
+                        <li><input type="radio" name="dominance" value="seimbang_kiri">
+                          <label>Seimbang cenderung otak kiri</label></li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+
+            </div>
+        
+            <!-- step three -->
+            <div class="step" id="test-3">
+
+              <div class="row test-header">
+                <h3>Tes Tipe Kecerdasan</h3>
+                <p class="desc">Tes ini bertujuan untuk menentukan kecenderungan tipe kecerdasan kamu. 
+                  Tipe tersebut dapat membuat kamu mengenali apa yang bisa kamu kembangkan berdasarkan tipe kecerdasan kamu. 
+                  Tenang, tipe kecerdasan tidak hanya berdasarkan kemampuan akademik, kok!
+                  1: sangat tidak setuju, 2: tidak setuju, 3: agak setuju, 4: setuju, 5: sangat setuju</p>
+              </div>
+
+              <div id="tipe-kecerdasan-container"></div>
+
+            </div>
+
+            <!-- step four -->
+            <div class="step" id="test-4">
+
+              <div class="row test-header">
+                <h3>Tes Gaya Belajar</h3>
+                <p class="desc">Tes ini bertujuan untuk mengetahui gaya belajar kamu.<br>
+                  Pilihlah angka 1, 2, atau 3 yang sesuai dengan kondisimu!</p>
+              </div>
+
+              <div id="gaya-belajar-container" class="px-5"></div>
+            
+            </div>
+        
+          <!-- start previous / next buttons -->
+          <div class="form-footer d-flex">
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
+          <!-- end previous / next buttons -->
+
+        </form>
+
+      </div>
+    </section><!-- End Form Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credit">
+        Kelompok 2 Capstone K1-02
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script src="static/js/questions-list.js"></script>
+
+</body>
+
+</html>

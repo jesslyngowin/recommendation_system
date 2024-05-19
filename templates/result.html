@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sistem Rekomendasi Jurusan FMIPA IPB</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header & Hero credit: https://bootstrapmade.com/reveal-bootstrap-corporate-template/ -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div id="logo">
+        <a href="index.html"><img src="static/img/logo-fmipa-ipb.png" alt=""></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Sistem Rekomendasi <br>Jurusan FMIPA IPB</h2>
+      <div>
+        <a href="index.html" class="btn-get-started scrollto">Get Started</a>
+      </div>
+    </div>
+
+    <div class="hero-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/1.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/2.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/3.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/4.jpg');"></div>
+        <div class="swiper-slide" style="background-image: url('static/img/hero-carousel/5.jpg');"></div>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <section id="result">
+      <div class="container section-header" data-aos="fade-up">
+
+        <h2 class="text-center fs-4">Result</h2>
+
+        <div class="d-flex justify-content-center">
+          <table class="table table-striped w-50">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Jurusan</th>
+                <th scope="col">Similarity</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for rec in recommendations %}
+                <tr>
+                  <th scope="row">{{ loop.index }}</th>
+                  <td>{{ rec[0] }}</td>  
+                  <td>{{ (rec[1] |round(2)) }}</td> 
+                </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section><!-- End Form Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="credit">
+        Kelompok 2 Capstone K1-02
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+  <script src="static/js/questions-list.js"></script>
+
+</body>
+
+</html>
