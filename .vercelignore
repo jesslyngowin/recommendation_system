@@ -1,0 +1,13 @@
+# Exclude virtual environment directory
+venv/
+
+# Exclude cache directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Exclude other unnecessary files
+*.log
+*.sqlite3
+.DS_Store
